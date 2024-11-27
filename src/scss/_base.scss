@@ -147,8 +147,10 @@ body {
 .servise_features {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(2, 200px);
-	gap: 15px;
+	grid-template-rows: repeat(2, 16.375rem);
+	position: relative;
+	top: -17px; /* Сдвигаем контейнер на 17px вверх */
+	column-gap: 7.5rem;
 }
 
 .service_card {
@@ -177,10 +179,83 @@ body {
 	font-size: 14px;
 }
 
-.content__col {
+/* .content__col {
 	width: calc(50% - 15px);
-}
+} */
 .content {
 	display: flex;
-	gap: 1.8rem;
+	gap: 7rem;
+}
+.servise_features__in {
+	max-width: 26.2rem;
+}
+.servise_features__icon.servise_features__icon--design {
+	background-image: url(../../src/imgs/Form/colum_line.svg);
+}
+.servise_features__icon.servise_features__icon--logo_branding {
+	background-image: url(../../src/imgs/Form/logo_branding.svg);
+}
+.servise_features__icon.servise_features__icon--app_design {
+	background-image: url(../../src/imgs/Form/app_desing.svg);
+}
+.servise_features__icon.servise_features__icon--webiste_design {
+	background-image: url(../../src/imgs/Form/webiste_design.svg);
+}
+.servise_features__icon {
+	height: 2.4rem;
+	width: 2.4rem;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.servise_features__icon_w:has(.servise_features__icon.servise_features__icon--design) {
+	background: $color_background_opacity;
+	border-radius: 1.2rem;
+	width: 4rem;
+	height: 4rem;
+}
+
+.servise_features__icon_w:has(.servise_features__icon.servise_features__icon--logo_branding) {
+	background: $color_background_opacity;
+	border-radius: 1.2rem;
+	width: 4rem;
+	height: 4rem;
+}
+
+.servise_features__icon_w:has(.servise_features__icon.servise_features__icon--app_design) {
+	background: $color_background_opacity;
+	border-radius: 1.2rem;
+	width: 4rem;
+	height: 4rem;
+}
+.servise_features__icon_w:has(.servise_features__icon.servise_features__icon--webiste_design) {
+	background: $color_background_opacity;
+	border-radius: 1.2rem;
+	width: 4rem;
+	height: 4rem;
+}
+
+.servise_features__icon_w {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.title_icon {
+	font-size: 1.6rem;
+	font-weight: 600;
+	line-height: 2.8rem;
+	color: $color_title;
+	margin-top: 1.2rem;
+	margin-bottom: 1rem;
+}
+.servise_features__descr {
+	margin-bottom: 2.75rem;
+	font-size: 1.2rem;
+	font-weight: 400;
+	line-height: 2.8rem;
+	opacity: 80%;
+	white-space: normal;
+	word-wrap: break-word;
 }
