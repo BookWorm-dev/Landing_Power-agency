@@ -33,37 +33,154 @@ body {
 	padding: 10rem 0;
 }
 .section__title {
-	margin-bottom: 4.4375rem;
-	line-height: 1.5rem;
-
-	font-size: 4rem;
-	font-weight: 800;
-	color: #1e1f4b;
+	font-family: Poppins;
+	font-size: 3.2rem;
+	font-weight: 700;
+	line-height: 5.2rem;
+	margin-bottom: 1.2rem;
 }
 .container {
 	width: 100%;
-	padding: 0 2rem;
-	max-width: 114.4rem;
+	padding: 0 12rem;
+	max-width: 114.6rem;
 	margin: 0 auto;
 }
-
-.swiper {
-	width: 600px;
-	height: 300px;
-}
-
-//Section Form
-
-/* .section__title {
-	margin-bottom: 7.1rem;
-}
- */
-.section__decscr {
-	font-size: 2rem;
+.section__descr {
+	font-size: 1.6rem;
 	font-weight: 400;
-	line-height: 2.25rem;
-	color: $color_descr;
+	line-height: 2.5rem;
 	opacity: 75%;
-	margin-bottom: 3.125rem;}
+	margin-bottom: 5rem;
+}
 
-	
+/* .content__form {
+	text-align: center;
+	max-width: 1200px;
+	margin: 3rem auto;
+  } */
+
+/*   .content__form h2 {
+	font-size: 36px;
+	font-weight: bold;
+	color: #2d2d2d;
+  } */
+
+/* .content__form p {
+	font-size: 16px;
+	color: #666;
+	margin-bottom: 1.5rem;
+} */
+
+/* Форма подписки */
+/*   .form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 2rem;
+  } */
+
+.form__input-wrapper {
+	position: relative;
+	display: flex;
+	align-items: center;
+	border-radius: 8px;
+	padding: 0.5rem;
+	width: 39rem;
+	height: 5.5rem;
+	background-color: rgba(112, 111, 229, 0.1); /* Цвет с 10% прозрачностью */
+}
+
+.form__icon {
+	width: 3.4rem;
+	height: 2.4rem;
+}
+
+.form__input {
+	flex: 1;
+	border: none;
+	/* 	padding: 10px;
+*/
+	color: #333;
+	border-radius: 8px;
+	background: transparent;
+	padding-right: 4;
+}
+
+.form__input::placeholder {
+	color: $color_common_text;
+	opacity: 70%;
+	font-size: 1.2rem;
+	font-family: Poppins;
+	font-weight: 400;
+	line-height: 2.4rem;
+	text-align: left;
+	text-underline-position: from-font;
+	text-decoration-skip-ink: none;
+}
+
+.form__button {
+	background-color: $color_background;
+	opacity: 1;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	color: white;
+	padding: 2rem 4rem;
+	font-size: 16px;
+	font-weight: bold;
+	border: none;
+	border-radius: 1.2rem;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	width: 14rem;
+	height: 2.4rem;
+	box-shadow: 0px 6px 20px 0px #706fe580;
+	margin-right: 1rem;
+}
+
+.form__button:hover {
+	background-color: #5a4bdb;
+}
+
+/* Карточки услуг */
+.servise_features {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 200px);
+	gap: 15px;
+}
+
+.service_card {
+	background-color: #f9f9fc;
+	padding: 2rem;
+	width: 250px;
+	text-align: center;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service_card img {
+	width: 50px;
+	height: 50px;
+	margin-bottom: 1rem;
+}
+
+.service_card h3 {
+	font-size: 20px;
+	color: #333;
+	margin-bottom: 1rem;
+}
+
+.service_card p {
+	color: #777;
+	font-size: 14px;
+}
+
+.content__col {
+	width: calc(50% - 15px);
+}
+.content {
+	display: flex;
+	gap: 1.8rem;
+}
