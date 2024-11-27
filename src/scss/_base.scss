@@ -1,6 +1,5 @@
 @use './helpers/abstracts' as *;
 @use './helpers/variables' as *;
-@use './blocks/comments' as *;
 
 html {
 	// font-size: calc(100dvw / 1920 * 10);
@@ -320,4 +319,39 @@ body {
 /* 	line-height: 3rem;
  */	text-align: center;
 	
+}
+.swiper-container {
+    width: 100%;
+    height: auto;
+}
+
+.swiper-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.comments_nav__img {
+    border-radius: 50%;
+    width: 8.6rem;
+    height: 8.6rem;
+    object-fit: cover;
+}
+
+.comments_nav__name {
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    margin-top: 1rem;
+}
+
+.comments_nav__pos {
+    font-size: 1.6rem;
+    color: #555;
 }
