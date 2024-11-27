@@ -1,5 +1,6 @@
 @use './helpers/abstracts' as *;
 @use './helpers/variables' as *;
+@use './blocks/comments' as *;
 
 html {
 	// font-size: calc(100dvw / 1920 * 10);
