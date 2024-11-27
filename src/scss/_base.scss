@@ -1,6 +1,5 @@
-/* @use './helpers/abstracts' as *;
- */
- @use './helpers/variables' as *;
+@use './helpers/abstracts' as *;
+@use './helpers/variables' as *;
 
 html {
 	// font-size: calc(100dvw / 1920 * 10);
@@ -11,12 +10,11 @@ html {
 html,
 body {
 	height: 100%;
-	font-family: $font_1;
 	font-weight: 400;
 	scroll-behavior: smooth;
 }
-.body {
-	font-family:$font_1;
+body {
+	font-family: $font_1;
 }
 .wrapper {
 	width: 100%;
@@ -35,58 +33,45 @@ body {
 	padding: 10rem 0;
 }
 .section__title {
+	margin-bottom: 4.4375rem;
 	line-height: 1.5rem;
+
 	font-size: 4rem;
 	font-weight: 800;
-	color: #1E1F4B;
+	color: #1e1f4b;
 }
 .container {
-	// max-width: 126rem;
 	width: 100%;
 	padding: 0 2rem;
 	max-width: 114.4rem;
 	margin: 0 auto;
 }
 
-/* remove */
-body {
-	font-family: cursive;
-}
-
-header,
-footer {
-	padding: 30px 0;
-	display: flex;
-	align-items: center;
-	min-height: 120px;
-	font-size: 50px;
-	text-align: center;
-	justify-content: center;
-	background-color: #ccc;
-
-	// @include bp($point_2, min) {
-	// 	background-color: tomato;
-	// }
-}
-
-.hello {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-
-	height: calc(100vh - 240px);
-	color: brown;
-	font-size: 5rem;
-
-	text-align: center;
-	// p {
-	// 	color: $color_black;
-	// }
-}
-
-/* remove */
 .swiper {
 	width: 600px;
 	height: 300px;
+}
+
+//Section Form
+
+/* .section__title {
+	margin-bottom: 7.1rem;
+}
+ */
+.section__decscr {
+	font-size: 2rem;
+	font-weight: 400;
+	line-height: 2.25rem;
+	color: $color_descr;
+	opacity: 75%;
+	margin-bottom: 3.125rem;
+}
+.container_form {
+	width: 100%;
+	height: 100%;
+}
+.input-with-image {
+	width: 491px;
+	height: 72px;
+	background-color: wheat;
 }
