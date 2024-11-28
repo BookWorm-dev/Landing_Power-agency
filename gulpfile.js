@@ -78,3 +78,10 @@ async function pretty() {
 exports.format = pretty;
 exports.cssmin = stylesMin;
 exports.default = series(parallel(html, styles, scripts, imageSync), browsersync, watching);
+const del = require('del');
+
+function clean() {
+  return del(['app/**', '!app']);
+}
+
+exports.default = series(clean, parallel(html, styles, scripts, imageSync), browsersync, watching);
