@@ -25,9 +25,11 @@
 		"gulp-file-include": "^2.3.0",
 		"gulp-prettier": "^6.0.0",
 		"gulp-sass": "^6.0.0",
-		"gulp-terser": "^2.1.0"
+		"gulp-terser": "^2.1.0",
+		"sass": "^1.81.0"
 	},
 	"dependencies": {
 		"swiper": "^11.1.15"
-	}
+	},
+	"keywords": []
 }

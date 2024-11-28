@@ -54,7 +54,7 @@ function browsersync(done) {
   browserSync.init({
     server: { baseDir: cfg.outputDir },
   });
-  done();  // Уведомляем Gulp о завершении задачи
+  done();
 }
 
 function watching(done) {
@@ -62,7 +62,7 @@ function watching(done) {
   watch([cfg.srcDir + 'js/**/*.js'], scripts);
   watch([cfg.srcDir + '/**/*.html'], html);
   watch([cfg.srcDir + 'imgs/**/*'], imageSync);
-  done();  // Завершаем задачу
+  done();
 }
 
 async function loadPrettier() {
