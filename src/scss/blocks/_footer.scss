@@ -1,0 +1,80 @@
+@use '../helpers/abstracts' as *;
+
+.section--footer {
+    background-color: #2E3E5C;
+    ;
+}
+
+.footer_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.footer__in {
+    margin: 0 auto;
+}
+
+.footer_logo {
+    text-decoration: none;
+    color: inherit;
+
+}
+
+.footer__title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 3.6rem;
+    text-decoration: none;
+    color: $color_white;
+    display: inline-flex;
+    /* Чтобы разместить элементы по горизонтали */
+    align-items: center;
+    /*     position: relative;
+ */
+}
+
+.circle {
+    margin-top: 12px;
+    width: 0.6rem;
+    height: 0.6rem;
+    background-color: #6c63ff;
+    border-radius: 50%;
+    margin-left: 0px;
+}
+
+/* .footer__title::after {
+    content: "";
+    position: absolute;
+    top: 21px;
+    left: 75px;
+    width: 0.6rem;
+    height: 0.6rem;
+    background-color: #6c63ff;
+    border-radius: 50%;
+} */
+
+.footer__img {
+    width: 1.6rem;
+    height: 1.6rem;
+    object-position: center;
+    object-fit: contain;
+    right: 10px;
+    position: relative;
+    display: block;
+    top: -15px;
+}
+
+//Socials
+
+.footer_socials {
+    display: flex;
+}
+
+.footer_socials__item_w:has(.footer_socials__item.footer_socials__item--instagram) {
+    background: $color_background_opacity;
+    border-radius: 1.2rem;
+    width: 4rem;
+    height: 4rem;
+}

@@ -47,7 +47,6 @@
 
 .comments_nav__img_w {
     display: flex;
-    /* Центрирование содержимого */
     justify-content: center;
     align-items: center;
     border-radius: 50%;
@@ -59,9 +58,7 @@
 
 .comments_nav__img {
     width: 100%;
-    /* Убедитесь, что изображение заполняет контейнер */
     height: auto;
-    /* Сохраняйте пропорции */
 }
 
 .comments_nav__data {
@@ -79,11 +76,7 @@
 }
 
 .comments_nav__pos {
-    /* 	font-size: 2rem;
- */
     font-weight: 500;
-    /* 	line-height: 3rem;
- */
     text-align: center;
 }
 
