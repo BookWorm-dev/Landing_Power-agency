@@ -39,8 +39,6 @@
 .form__input {
 	flex: 1;
 	border: none;
-	/* 	padding: 10px;
-*/
 	color: #333;
 	border-radius: 8px;
 	background: transparent;
@@ -84,14 +82,12 @@
 	background-color: #5a4bdb;
 }
 
-/* Карточки услуг */
 .servise_features {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(2, 16.375rem);
 	position: relative;
 	top: -17px;
-	/* Сдвигаем контейнер на 17px вверх */
 	column-gap: 7.5rem;
 }
 

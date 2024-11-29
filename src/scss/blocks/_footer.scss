@@ -167,8 +167,9 @@
 
 .footer_aside {
     display: flex;
-    justify-content: space-between; 
-    align-items: center;}
+    justify-content: space-between;
+    align-items: center;
+}
 
 .footer__links {
     display: flex;
@@ -184,7 +185,7 @@
 
 .footer__links a {
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.4rem;
     color: $color_white;
     opacity: 75%;
     transition: color 0.3s ease;
@@ -193,3 +194,29 @@
 /* .footer__links a:hover {
     color: #007BFF;
 } */
+
+.footer__button {
+   
+    padding: 1rem 4rem 1rem 4rem;
+    gap: 1rem;
+    border-radius: 1.2rem;
+    background-color: $color_background;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: $color_white;
+    padding: 2rem 4rem;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 18rem;
+    height: 4.7rem;
+    margin-right: 1rem;
+
+
+}
