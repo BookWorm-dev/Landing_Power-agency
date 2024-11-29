@@ -1,5 +1,6 @@
 @use '../helpers/abstracts' as *;
 
+
 .section--footer {
     background-color: #2E3E5C;
     ;
@@ -9,16 +10,20 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 5.7rem;
 }
 
 
 .footer__in {
+    top: -66px;
+    position: relative;
     margin: 0 auto;
 }
 
 .footer_logo {
     text-decoration: none;
     color: inherit;
+    flex-shrink: 0;
 
 }
 
@@ -29,10 +34,8 @@
     text-decoration: none;
     color: $color_white;
     display: inline-flex;
-    /* Чтобы разместить элементы по горизонтали */
     align-items: center;
-    /*     position: relative;
- */
+
 }
 
 .circle {
@@ -44,18 +47,10 @@
     margin-left: 0px;
 }
 
-/* .footer__title::after {
-    content: "";
-    position: absolute;
-    top: 21px;
-    left: 75px;
-    width: 0.6rem;
-    height: 0.6rem;
-    background-color: #6c63ff;
-    border-radius: 50%;
-} */
 
 .footer__img {
+    width: 100%;
+    height: 100%;
     width: 1.6rem;
     height: 1.6rem;
     object-position: center;
@@ -70,11 +65,131 @@
 
 .footer_socials {
     display: flex;
+    column-gap: 1.6rem;
 }
 
 .footer_socials__item_w:has(.footer_socials__item.footer_socials__item--instagram) {
     background: $color_background_opacity;
-    border-radius: 1.2rem;
-    width: 4rem;
-    height: 4rem;
+    border-radius: 20rem;
+    width: 4.8rem;
+    height: 4.8rem;
+    background-color: $color_background;
+    border: 1px solid $color_background
 }
+
+.footer_socials__item_w:has(.footer_socials__item.footer_socials__item--facebook) {
+    background: $color_background_opacity;
+    border-radius: 20rem;
+    width: 4.8rem;
+    height: 4.8rem;
+    background-color: $color_background;
+    border: 1px solid $color_background
+}
+
+.footer_socials__item_w:has(.footer_socials__item.footer_socials__item--X) {
+    background: $color_background_opacity;
+    border-radius: 20rem;
+    width: 4.8rem;
+    height: 4.8rem;
+    background-color: $color_background;
+    border: 1px solid $color_background
+}
+
+.footer_socials__item_w:has(.footer_socials__item.footer_socials__item--github) {
+    background: $color_background_opacity;
+    border-radius: 20rem;
+    width: 4.8rem;
+    height: 4.8rem;
+    background-color: $color_background;
+    border: 1px solid $color_background
+}
+
+.footer_socials__item_w {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_socials__item.footer_socials__item--github {
+    background-image: url(../../../app/imgs/footer/Git.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.footer_socials__item.footer_socials__item--X {
+    background-image: url(../../../app/imgs/footer/X.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 1.4rem;
+    height: 1.6rem;
+}
+
+.footer_socials__item.footer_socials__item--facebook {
+    background-image: url(../../../app/imgs/footer/Facebook.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.footer_socials__item.footer_socials__item--instagram {
+    background-image: url(../../../app/imgs/footer/Insta.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+
+.footer__info {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid chartreuse
+}
+
+.footer__heading {
+    margin-top: 4.8rem;
+    margin-bottom: 1.9rem;
+}
+
+.footer__heading__title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.7rem;
+    color: $color_white ;
+}
+
+.footer_aside {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;}
+
+.footer__links {
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 400;
+    line-height: 2rem;
+    gap: 6rem;
+}
+
+.footer__links li {
+    list-style: none;
+}
+
+.footer__links a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: $color_white;
+    opacity: 75%;
+    transition: color 0.3s ease;
+}
+
+/* .footer__links a:hover {
+    color: #007BFF;
+} */
