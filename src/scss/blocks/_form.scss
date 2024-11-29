@@ -1,0 +1,203 @@
+@use '../helpers/abstracts' as *;
+
+.section__title.section__title--form {
+	font-size: 3.2rem;
+	font-weight: 700;
+	line-height: 5.2rem;
+	margin-bottom: 1.2rem;
+}
+.content {
+	display: flex;
+	gap: 7rem;
+}
+
+.section__descr {
+	font-size: 1.6rem;
+	font-weight: 400;
+	line-height: 2.5rem;
+	opacity: 75%;
+	margin-bottom: 5rem;
+}
+
+.form__input-wrapper {
+	position: relative;
+	display: flex;
+	align-items: center;
+	border-radius: 8px;
+	padding: 0.5rem;
+	width: 39rem;
+	height: 5.5rem;
+	background-color: rgba(112, 111, 229, 0.1);
+	/* Цвет с 10% прозрачностью */
+}
+
+.form__icon {
+	width: 3.4rem;
+	height: 2.4rem;
+}
+
+.form__input {
+	flex: 1;
+	border: none;
+	/* 	padding: 10px;
+*/
+	color: #333;
+	border-radius: 8px;
+	background: transparent;
+	padding-right: 4;
+}
+
+.form__input::placeholder {
+	color: $color_common_text;
+	opacity: 70%;
+	font-size: 1.2rem;
+	font-family: Poppins;
+	font-weight: 400;
+	line-height: 2.4rem;
+	text-align: left;
+	text-underline-position: from-font;
+	text-decoration-skip-ink: none;
+}
+
+.form__button {
+	background-color: $color_background;
+	opacity: 1;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	color: white;
+	padding: 2rem 4rem;
+	font-size: 16px;
+	font-weight: bold;
+	border: none;
+	border-radius: 1.2rem;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	width: 14rem;
+	height: 2.4rem;
+	box-shadow: 0px 6px 20px 0px #706fe580;
+	margin-right: 1rem;
+}
+
+.form__button:hover {
+	background-color: #5a4bdb;
+}
+
+/* Карточки услуг */
+.servise_features {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 16.375rem);
+	position: relative;
+	top: -17px;
+	/* Сдвигаем контейнер на 17px вверх */
+	column-gap: 7.5rem;
+}
+
+.service_card {
+	background-color: #f9f9fc;
+	padding: 2rem;
+	width: 250px;
+	text-align: center;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service_card img {
+	width: 50px;
+	height: 50px;
+	margin-bottom: 1rem;
+}
+
+.service_card h3 {
+	font-size: 20px;
+	color: #333;
+	margin-bottom: 1rem;
+}
+
+.service_card p {
+	color: #777;
+	font-size: 14px;
+}
+
+.servise_features__in {
+	max-width: 26.2rem;
+}
+
+.servise_features__icon.servise_features__icon--design {
+	background-image: url(../../app/imgs/Form/colum_line.svg);
+}
+
+.servise_features__icon.servise_features__icon--logo_branding {
+	background-image: url(../../app/imgs/Form/logo_branding.svg);
+}
+
+.servise_features__icon.servise_features__icon--app_design {
+	background-image: url(../../app/imgs/Form/app_desing.svg);
+}
+
+.servise_features__icon.servise_features__icon--webiste_design {
+	background-image: url(../../app/imgs/Form/colum_line.svg);
+}
+
+.servise_features__icon {
+	height: 2.4rem;
+	width: 2.4rem;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.servise_features__icon_w:has(.servise_features__icon.servise_features__icon--design) {
+	background: $color_background_opacity;
+	border-radius: 1.2rem;
+	width: 4rem;
+	height: 4rem;
+}
+
+.servise_features__icon_w:has(.servise_features__icon.servise_features__icon--logo_branding) {
+	background: $color_background_opacity;
+	border-radius: 1.2rem;
+	width: 4rem;
+	height: 4rem;
+}
+
+.servise_features__icon_w:has(.servise_features__icon.servise_features__icon--app_design) {
+	background: $color_background_opacity;
+	border-radius: 1.2rem;
+	width: 4rem;
+	height: 4rem;
+}
+
+.servise_features__icon_w:has(.servise_features__icon.servise_features__icon--webiste_design) {
+	background: $color_background_opacity;
+	border-radius: 1.2rem;
+	width: 4rem;
+	height: 4rem;
+}
+
+.servise_features__icon_w {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.title_icon {
+	font-size: 1.6rem;
+	font-weight: 600;
+	line-height: 2.8rem;
+	color: $color_title;
+	margin-top: 1.2rem;
+	margin-bottom: 1rem;
+}
+
+.servise_features__descr {
+	margin-bottom: 2.75rem;
+	font-size: 1.2rem;
+	font-weight: 400;
+	line-height: 2.8rem;
+	opacity: 80%;
+	white-space: normal;
+	word-wrap: break-word;
+}
