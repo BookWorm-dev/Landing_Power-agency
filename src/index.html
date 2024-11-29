@@ -1,36 +1,47 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Landing Power Agency</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-		<link rel="stylesheet" href="./css/style.css" />
-	</head>
-	<body>
-		<div class="wrapper">
-			<header class="header">header</header>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Landing Power Agency</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800;900&display=swap"
+		rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-			<main class="main">
-				<section class="section section--bg">
-					<div class="container">
-						<h2 class="section__title section__title--centr comments_title">
-							Let’s hear <br />What they says
-						</h2>
-						<div class="comments">
-							<div class="comments_content">
-								<div class="comments__item">
-									<div class="comments__item_text">1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus vel lobortis tincidunt fames quisque mauris at diam. Nullam morbi ipsum turpis amet id posuere torto quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</div>
-								</div>
-								<div class="comments__item">
-									<div class="comments__item_text">2Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus vel lobortis tincidunt fames quisque mauris at diam. Nullam morbi ipsum turpis amet id posuere torto quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</div>
-								</div>
+	<link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+	<div class="wrapper">
+		@@include('./html/header.html')
+		<main class="main"> @@include('./html/blocks/comments.html')
+<!-- 
+			<section class="section section--bg">
+				<div class="container">
+					<h2 class="section__title section__title--centr comments_title">
+						Let’s hear <br />What they says
+					</h2>
+					<div class="comments">
+						<div class="comments_content">
+							<div class="comments__item">
+								<div class="comments__item_text">1Lorem ipsum dolor sit amet, consectetur adipiscing
+									elit. Risus vel lobortis tincidunt fames quisque mauris at diam. Nullam morbi ipsum
+									turpis amet id posuere torto quis nostrud exercitation ullamco laboris nisi ut
+									aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+									velit esse cillum dolore.</div>
 							</div>
+							<div class="comments__item">
+								<div class="comments__item_text">2Lorem ipsum dolor sit amet, consectetur adipiscing
+									elit. Risus vel lobortis tincidunt fames quisque mauris at diam. Nullam morbi ipsum
+									turpis amet id posuere torto quis nostrud exercitation ullamco laboris nisi ut
+									aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+									velit esse cillum dolore.</div>
+							</div>
+						</div>
 						<div class="swiper-container">
 							<div class="swiper-wrapper comments_nav">
 								<div class="swiper-slide comments_nav__item">
@@ -53,7 +64,8 @@
 								</div>
 								<div class="swiper-slide comments_nav__item">
 									<div class="comments_nav__img_w">
-										<img src="../src/imgs/comments/commments_nav_1.jpg" alt="" class="comments_nav__img" />
+										<img src="../src/imgs/comments/commments_nav_1.jpg" alt=""
+											class="comments_nav__img" />
 									</div>
 									<div class="comments_nav__data">
 										<div class="comments_nav__name">John Smith</div>
@@ -79,85 +91,88 @@
 									</div>
 								</div>
 							</div>
-				
+
 							<div class="swiper-button-next"></div>
 							<div class="swiper-button-prev"></div>
-				
+
 							<div class="swiper-pagination"></div>
 						</div>
 					</div>
-				</section>
-				
-				<section class="section section--form">
-					<div class="container">
-						<div class="content">
-							<div class="content__col">
-								<div class="section__title section__title--form">
-									<h2>How We Can Help You</h2>
-								</div>
-								<div class="section__descr">
-									Follow our newsletter. We will regularly update <br />
-									our latest project and availability.
-								</div>
-								<div class="content__form">
-									<form action="#" method="post" class="form">
-										<div class="form__input-wrapper">
-											<img src="./imgs/Form/inbox.svg" class="form__icon" alt="email icon" />
-											<input type="email" placeholder="Enter your email address" class="form__input" required />
-											<div class="btn"><button type="submit" class="form__button">Subscribe</button></div>
+			</section>
+ -->
+			<section class="section section--form">
+				<div class="container">
+					<div class="content">
+						<div class="content__col">
+							<div class="section__title section__title--form">
+								<h2>How We Can Help You</h2>
+							</div>
+							<div class="section__descr">
+								Follow our newsletter. We will regularly update <br />
+								our latest project and availability.
+							</div>
+							<div class="content__form">
+								<form action="#" method="post" class="form">
+									<div class="form__input-wrapper">
+										<img src="./imgs/Form/inbox.svg" class="form__icon" alt="email icon" />
+										<input type="email" placeholder="Enter your email address" class="form__input"
+											required />
+										<div class="btn"><button type="submit" class="form__button">Subscribe</button>
 										</div>
-									</form>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="servise_features">
+							<div class="servise_features__in">
+								<div class="servise_features__icon_w">
+									<div class="servise_features__icon servise_features__icon--design"></div>
+								</div>
+								<h3 class="title_icon">UI/UX Design</h3>
+								<div class="servise_features__descr">
+									Sometimes features require <br />
+									a short description
 								</div>
 							</div>
-							<div class="servise_features">
-								<div class="servise_features__in">
-									<div class="servise_features__icon_w">
-										<div class="servise_features__icon servise_features__icon--design"></div>
-									</div>
-									<h3 class="title_icon">UI/UX Design</h3>
-									<div class="servise_features__descr">
-										Sometimes features require <br />
-										a short description
-									</div>
+							<div class="servise_features__in">
+								<div class="servise_features__icon_w">
+									<div class="servise_features__icon servise_features__icon--logo_branding"></div>
 								</div>
-								<div class="servise_features__in">
-									<div class="servise_features__icon_w">
-										<div class="servise_features__icon servise_features__icon--logo_branding"></div>
-									</div>
-									<h3 class="title_icon">Logo Branding</h3>
-									<div class="servise_features__descr">
-										Sometimes features require <br />
-										a short description
-									</div>
+								<h3 class="title_icon">Logo Branding</h3>
+								<div class="servise_features__descr">
+									Sometimes features require <br />
+									a short description
 								</div>
-								<div class="servise_features__in">
-									<div class="servise_features__icon_w">
-										<div class="servise_features__icon servise_features__icon--app_design"></div>
-									</div>
-									<h3 class="title_icon">App Design</h3>
-									<div class="servise_features__descr">
-										Sometimes features require <br />
-										a short description
-									</div>
+							</div>
+							<div class="servise_features__in">
+								<div class="servise_features__icon_w">
+									<div class="servise_features__icon servise_features__icon--app_design"></div>
 								</div>
-								<div class="servise_features__in">
-									<div class="servise_features__icon_w">
-										<div class="servise_features__icon servise_features__icon--webiste_design"></div>
-									</div>
-									<h3 class="title_icon">Webiste Design</h3>
-									<div class="servise_features__descr">
-										Sometimes features require <br />
-										a short description
-									</div>
+								<h3 class="title_icon">App Design</h3>
+								<div class="servise_features__descr">
+									Sometimes features require <br />
+									a short description
+								</div>
+							</div>
+							<div class="servise_features__in">
+								<div class="servise_features__icon_w">
+									<div class="servise_features__icon servise_features__icon--webiste_design"></div>
+								</div>
+								<h3 class="title_icon">Webiste Design</h3>
+								<div class="servise_features__descr">
+									Sometimes features require <br />
+									a short description
 								</div>
 							</div>
 						</div>
 					</div>
-				</section>
-			</main>
-			<footer class="footer">footer</footer>
-		</div>
-		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-		<script src="./js/script.min.js"></script>
-	</body>
+				</div>
+			</section>
+		</main>
+		@@include('./html/footer.html')
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script src="./js/script.min.js"></script>
+</body>
+
 </html>
