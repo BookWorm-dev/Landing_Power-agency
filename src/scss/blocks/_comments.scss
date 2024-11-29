@@ -1,35 +1,103 @@
-.swiper-container {
-    width: 100%;
-    height: auto;
+@use '../helpers/abstracts' as *;
+
+.comments {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 7rem;
 }
 
-.swiper-wrapper {
-    display: flex;
-    align-items: center;
+.comments_title {
+	margin-bottom: 5rem;
 }
 
-.swiper-slide {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+.comments__item {
+	display: block;
+	max-width: 67rem;
+	width: 100%;
 }
 
+.comments__item_text {
+	font-size: 1.6rem;
+	font-weight: 400;
+	line-height: 1.5;
+	text-align: center;
+	color: #03014c;
+}
+
+.comments_nav {
+	display: flex;
+	gap: 7rem;
+}
+
+.comments_nav__img_w {
+	display: flex; /* Центрирование содержимого */
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	overflow: hidden;
+	height: 8.6rem;
+	width: 8.6rem;
+	margin-bottom: 1.9rem;
+}
 .comments_nav__img {
-    border-radius: 50%;
-    width: 8.6rem;
-    height: 8.6rem;
-    object-fit: cover;
+	width: 100%; /* Убедитесь, что изображение заполняет контейнер */
+	height: auto; /* Сохраняйте пропорции */
 }
 
+.comments_nav__data {
+	text-align: center;
+}
 .comments_nav__name {
-    font-weight: bold;
-    font-size: 2.4rem;
-    line-height: 3.6rem;
-    margin-top: 1rem;
+	font-weight: bold;
+	font-size: 1.4rem;
+	font-weight: 700;
+	line-height: 1.5;
+	text-align: center;
+	text-underline-position: from-font;
+	text-decoration-skip-ink: none;
 }
 
 .comments_nav__pos {
-    font-size: 1.6rem;
-    color: #555;
+	/* 	font-size: 2rem;
+ */
+	font-weight: 500;
+	/* 	line-height: 3rem;
+ */
+	text-align: center;
+}
+.swiper-container {
+	width: 100%;
+	height: auto;
+}
+
+.swiper-wrapper {
+	display: flex;
+	align-items: center;
+}
+
+.swiper-slide {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.comments_nav__img {
+	border-radius: 50%;
+	width: 8.6rem;
+	height: 8.6rem;
+	object-fit: cover;
+}
+
+.comments_nav__name {
+	font-weight: bold;
+	font-size: 2.4rem;
+	line-height: 3.6rem;
+	margin-top: 1rem;
+}
+
+.comments_nav__pos {
+	font-size: 1.6rem;
+	color: #555;
 }
