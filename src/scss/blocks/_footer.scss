@@ -211,12 +211,13 @@
     background-color: $color_background;
     color: $color_white;
     padding: 1rem 4rem;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: bold;
     border: none;
     border-radius: 1.2rem;
     cursor: pointer;
     transition: transform 0.3s ease;
+    text-decoration: none;
 }
 
 .footer__button:hover {
