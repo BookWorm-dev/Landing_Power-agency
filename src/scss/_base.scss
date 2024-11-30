@@ -42,3 +42,13 @@ body {
 	max-width: 114.6rem;
 	margin: 0 auto;
 }
+.section__title {
+	font-size: 4rem;
+	font-weight: 800;
+	line-height: 1.5;
+	color: $color_title;
+
+	&.section__title--centr {
+		text-align: center;
+	}
+}
