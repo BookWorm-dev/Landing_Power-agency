@@ -1,5 +1,32 @@
 @use '../helpers/abstracts' as *;
 
+.container--comments {
+    position: relative;
+
+    &::after,
+    &::before {
+        position: absolute;
+        top: -1rem;
+        content: '';
+        width: 9.9rem;
+        height: 7.1rem;
+        background-image: url(../../../app/imgs/comments/sectional_design_number2.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    &::after {
+        left: 9rem;
+    }
+
+    &::before {
+        top: 38rem;
+        right: 10rem;
+        rotate: 180deg;
+    }
+}
+
 .comments {
     position: relative;
     display: block;
@@ -12,13 +39,10 @@
     &::before {
         position: absolute;
         top: -5rem;
-
         content: '';
-
         width: 5.6rem;
         height: 5rem;
-
-        background-image: url(../../imgs/comments/“.svg);
+        background-image: url(../../../app/imgs/comments/bkt.svg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
