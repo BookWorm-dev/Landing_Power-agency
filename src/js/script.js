@@ -31,3 +31,18 @@ const swiper4 = new Swiper('.swiper_4', {
         disableOnInteraction: false,
     },
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const swiperFour = new Swiper('.swiper_6', {
+        slidesPerView: 5,
+        loop: true,
+        spaceBetween: 20,
+    });
+
+    const swiperThree = new Swiper('.swiper_5', {
+        loop: true,
+        thumbs: {
+            swiper: swiperFour,
+        },
+    });
+});
