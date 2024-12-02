@@ -1,0 +1,39 @@
+@use '../helpers/abstracts' as *;
+
+/* .content__col--hero {
+        width: calc(70% - 15px)
+
+} */
+
+.section__title--hero {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 11rem;
+    letter-spacing: 0.2px;
+}
+
+.section__descr {
+    width: 50%;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 3.6rem;
+    opacity: 80%;
+    margin-bottom: 4.2rem;
+
+}
+
+.span_hero__title {
+    color: $color_background;
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 10rem;
+    letter-spacing: 0.2px;
+
+
+}
+
+.hero__img {
+    max-width: 100%;
+    width: 54.6rem;
+    height: 63.1rem;
+}
