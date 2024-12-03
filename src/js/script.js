@@ -1,4 +1,4 @@
-const body = document.querySelector('body');
+/* const body = document.querySelector('body');
 const swiperTwo = new Swiper(".swiper_2", {
     slidesPerView: 5,
     loop: !0
@@ -45,4 +45,26 @@ document.addEventListener('DOMContentLoaded', () => {
             swiper: swiperFour,
         },
     });
-});
+}); */
+
+if ("function" == typeof Swiper) {
+    const e = new Swiper(".swiper_2",{
+        slidesPerView: 5,
+        loop: !0
+    });
+    new Swiper(".swiper_1",{
+        initialSlide: 2,
+        thumbs: {
+            swiper: e
+        }
+    }),
+    new Swiper(".swiper_3",{
+        slidesPerView: 5,
+        loop: !0,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: !0
+        }
+    })
+}
+document.querySelector(".block") && (document.querySelector(".block").innerHTML = "hello");

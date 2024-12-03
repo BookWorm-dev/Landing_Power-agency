@@ -1,5 +1,6 @@
 @use '../helpers/abstracts' as *;
 
+
 .section__title.section__title--form {
 	font-size: 4rem;
 	font-weight: 700;
@@ -58,19 +59,14 @@
 }
 
 .form__button {
+	@include st_btn;
 	background-color: $color_background;
-	opacity: 1;
-	display: flex;
-	justify-content: center;
-	text-align: center;
-	align-items: center;
-	color: white;
+	color: $color_white;
 	padding: 2rem 4rem;
 	font-size: 1.6rem;
 	font-weight: bold;
 	border: none;
 	border-radius: 1.2rem;
-	cursor: pointer;
 	transition: background-color 0.3s;
 	width: 16rem;
 	height: 2.4rem;

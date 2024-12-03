@@ -1,100 +1,48 @@
 @use '../helpers/abstracts' as *;
 
 .section__title--companies {
-    align-items: center;
+    text-align: center;
+    margin-bottom: 4.6rem;
     font-size: 2rem;
     font-weight: 600;
-    line-height: 2.4;
+    line-height: 1.2;
     letter-spacing: 0.2px;
-    margin-bottom: 4.7rem;
     color: $color_title;
 }
 
-.container--companies {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-.container--companies {
+.companies__slider {
     position: relative;
-}
-
-.companies {
-    position: relative;
-    display: block;
-    max-width: 67rem;
-    width: 100%;
-    margin: 0 auto;
-}
-
-.companies_content {
     overflow: hidden;
 
-    &:not(:last-child) {
-        margin-bottom: 1rem;
+    &::after,
+    &::before {
+        position: absolute;
+        top: 0;
+        content: '';
+        width: 10rem;
+        height: 100%;
+        z-index: 2;
     }
-}
 
-.companies_nav {
-    display: flex;
+    &::before {
+        left: 0;
+        background-image: linear-gradient(to right, #fff, transparent);
+    }
+
+    &::after {
+        right: 0;
+        background-image: linear-gradient(to left, #fff, transparent);
+    }
 }
 
 .companies_nav__item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    cursor: pointer;
-}
-
-.companies_nav__img_w {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.3s ease-in-out;
-
-    .swiper-slide.swiper-slide-thumb-active & {
-        transform: scale(1.1);
-    }
-
-    .swiper-slide:not(.swiper-slide-thumb-active) & {
-        transform: scale(1);
-    }
-}
-
-.companies_nav__img {
-    width: 100%;
-    height: 100%;
-}
-
-.companies_nav__img--google {
-    width: 10rem;
-    height: 3.6rem;
-}
-
-.companies_nav__img--airbnb {
-    width: 11.6rem;
-    height: 3.6rem;
-}
-
-.companies_nav__img--creature_market {
-    width: 11rem;
+    display: block;
+    width: 12.6rem;
     height: 4.2rem;
 }
 
-.companies_nav__img--shopity {
-    width: 12.6rem;
-    height: 3.6rem;
-}
 
-.companies_nav__img--amazon {
-    width: 11.8rem;
-    height: 3.6rem;
+.companies__img {
+    @extend %contain_img;
 }
-
-.swiper-wrapper--companies {
-    justify-content: center;
-    column-gap: 6rem;
-}
-
