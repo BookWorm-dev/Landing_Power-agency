@@ -48,23 +48,39 @@ document.addEventListener('DOMContentLoaded', () => {
 }); */
 
 if ("function" == typeof Swiper) {
-    const e = new Swiper(".swiper_2",{
+    const e = new Swiper(".swiper_2", {
         slidesPerView: 5,
         loop: !0
     });
-    new Swiper(".swiper_1",{
+    new Swiper(".swiper_1", {
         initialSlide: 2,
         thumbs: {
             swiper: e
         }
     }),
-    new Swiper(".swiper_3",{
-        slidesPerView: 5,
-        loop: !0,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: !0
-        }
-    })
+        new Swiper(".swiper_3", {
+            slidesPerView: 5,
+            loop: !0,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: !0
+            }
+        })
 }
 document.querySelector(".block") && (document.querySelector(".block").innerHTML = "hello");
+
+//scroll
+document.querySelectorAll('.nav__link').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        if (this.hasAttribute('data-target')) {
+            const targetSelector = this.getAttribute('data-target');
+            const targetElement = document.querySelector(targetSelector);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    });
+});
