@@ -1,6 +1,5 @@
 @use './helpers/abstracts' as *;
 @use './helpers/variables' as *;
-@use './blocks/comments' as *;
 
 html {
 	// font-size: calc(100dvw / 1920 * 10);
@@ -42,6 +41,7 @@ body {
 	max-width: 114.6rem;
 	margin: 0 auto;
 }
+
 .section__title {
 	font-size: 4rem;
 	font-weight: 800;
@@ -51,4 +51,15 @@ body {
 	&.section__title--centr {
 		text-align: center;
 	}
+}
+
+.section__descr {
+	/*     width: 50%;
+	 */
+	font-size: 2rem;
+	font-weight: 400;
+	line-height: 1.8;
+	opacity: 80%;
+	margin-bottom: 4.2rem;
+	color: $color_common_text;
 }

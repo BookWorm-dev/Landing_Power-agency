@@ -1,3 +1,5 @@
+@use '../variables' as *;
+
 @mixin st_btn {
 	display: inline-flex;
 	justify-content: center;
@@ -8,35 +10,38 @@
 	text-decoration: none;
 }
 
+
 //color extends
-// %transp_btn_1 {
-// 	@include st_btn;
+%accent_btn_1 {
 
-// 	font-weight: 700;
-// 	color: $color_white;
-// 	background-color: transparent;
-// 	transition: 0.3s ease;
-// 	border: 2px solid $color_white;
+	@include st_btn;
+	font-weight: 600;
+	color: $color_white;
+	background-color: $color_background;
+	transition: 0.3s ease;
+	text-decoration: none;
 
-// 	&:hover {
-// 		background-color: $color_white;
-// 		color: $color_black;
-// 	}
-// }
+	&:hover {
+		background-color: rgba($color_background, 80%);
+	}
 
-//size extends
-// %btn_size_1 {
-// 	min-width: 23.2rem;
-// 	height: 5.4rem;
-// 	padding: 0 2rem;
+}
 
-// 	line-height: 5.4rem;
-// 	font-size: 1.6rem;
 
-// 	border-radius: 2px;
-// }
 
-// .btn_white_1 {
-// 	@extend %white_btn_1;
-// 	@extend %btn_size_1;
-// }
+//size extends 
+%btn_size_1 {
+	min-width: 18rem;
+	height: 4.8rem;
+	padding: 0 2rem;
+
+	line-height: 4.8rem;
+	font-size: 1.8rem;
+
+	border-radius: 1.2rem;
+}
+
+.btn_1 {
+	@extend %accent_btn_1;
+	@extend %btn_size_1;
+}
