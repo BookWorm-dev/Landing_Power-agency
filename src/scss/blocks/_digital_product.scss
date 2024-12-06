@@ -3,6 +3,11 @@
 .content--digital_product {
     display: flex;
     flex-direction: column;
+
+    @include bp($point_6, max) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .content_info__title {
@@ -12,6 +17,12 @@
     letter-spacing: 0.2px;
     color: $color_common_text;
     margin-bottom: 1.4rem;
+
+    @include bp($point_6, max) {
+        font-size: 3rem;
+        line-height: 4rem;
+        margin-bottom: 1rem;
+    }
 }
 
 .content_info__descr {
@@ -22,20 +33,39 @@
     opacity: 80%;
     margin-bottom: 4rem;
 
+    @include bp($point_6, max) {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+        margin-bottom: 3rem;
+    }
 }
 
 .content_project {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 188px);
     gap: 13rem 3rem;
+
+    @include bp($point_2, max) {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18rem 2rem;
+    }
+
+    @include bp($point_5, max) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: 12rem 1.5rem;
+    }
 }
 
 .projects__item_img {
-    @extend %cover_img;
+    @extend %contain_img;
     border-radius: 3.5rem;
     margin-bottom: 1.2rem;
 
+    @include bp($point_6, max) {
+        border-radius: 2rem;
+    }
 }
 
 .projects__item:nth-child(1) {
@@ -43,6 +73,18 @@
     grid-row: 1 / span 2;
     width: 55.5rem;
     height: 44.8rem;
+
+    @include bp($point_1, max) {
+        grid-column: span 3;
+        width: auto;
+        height: auto;
+    }
+
+    @include bp($point_6, max) {
+        grid-column: span 2;
+        width: 100%;
+        height: auto;
+    }
 }
 
 .projects__item:nth-child(2),
@@ -55,6 +97,11 @@
     height: 18.8rem;
     margin-bottom: 2.8rem;
 
+    @include bp($point_6, max) {
+        margin-bottom: 2.8rem;
+        width: 100%;
+        height: auto;
+    }
 }
 
 .project__desrc {
@@ -64,6 +111,12 @@
     margin-bottom: 0.8rem;
     opacity: 80%;
     color: $color_common_text;
+
+    @include bp($point_6, max) {
+        font-size: 1.2rem;
+        line-height: 2rem;
+        margin-bottom: 4.6rem;
+    }
 }
 
 .project__title {
@@ -72,6 +125,12 @@
     line-height: 2.8rem;
     margin-bottom: 1.2rem;
     color: $color_title;
+
+    @include bp($point_6, max) {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        margin-bottom: 1rem;
+    }
 }
 
 .project__title_secondary {
@@ -80,4 +139,8 @@
     line-height: 2.8rem;
     color: $color_common_text;
 
+    @include bp($point_6, max) {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
 }
