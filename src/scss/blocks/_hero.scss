@@ -1,8 +1,5 @@
 @use '../helpers/abstracts' as *;
 
-.content__col--hero {
-    width: calc(70% - 15px)
-}
 
 .hero {
     display: flex;
@@ -12,9 +9,101 @@
 .hero__title {
     font-size: 6rem;
     font-weight: 700;
-    line-height: 11rem;
+    line-height: 1.83;
     color: $color_title;
     margin-bottom: 4.2rem;
+
+    strong {
+        position: relative;
+        padding: 0 3.8rem;
+        display: inline-block;
+        color: $color_background;
+        border: 0.8rem solid $color_background;
+
+        span {
+            --circle-d: 2.8rem;
+            --minus-half-circle-d: calc(var(--circle-d)*(-0.8));
+            position: absolute;
+            display: block;
+            height: var(--circle-d);
+            width: var(--circle-d);
+            border-radius: 50%;
+            border: 0.8rem solid $color_background;
+            background-color: $color_white;
+
+            &:nth-child(1) {
+                top: var(--minus-half-circle-d);
+                left: var(--minus-half-circle-d);
+            }
+
+            &:nth-child(2) {
+                top: var(--minus-half-circle-d);
+                right: var(--minus-half-circle-d);
+            }
+
+            &:nth-child(3) {
+                bottom: var(--minus-half-circle-d);
+                right: var(--minus-half-circle-d);
+            }
+
+            &:nth-child(4) {
+                bottom: var(--minus-half-circle-d);
+                left: var(--minus-half-circle-d);
+            }
+
+
+        }
+    }
+}
+
+.hero__descr {
+    &:not(:last-child) {
+        margin-bottom: 2.4rem
+    }
+}
+
+.hero__btns {
+    display: flex;
+    column-gap: 3.4rem;
+}
+
+.btn_watch {
+    display: flex;
+    column-gap: 1.3rem;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-decoration: none;
+    color: $color_title ;
+}
+
+
+.btn_watch__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4.8rem;
+    width: 4.8rem;
+    background-color: rgba($color_background, 15%);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all $transition_dur ease-in-out 0.3s;
+
+    &::before {
+        content: '';
+        width: 1rem;
+        height: 1rem;
+        background-image: url("data:image/svg+xml,%3Csvg width='11' height='12' viewBox='0 0 11 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.97348 5.09164C10.6766 5.49812 10.6744 6.50002 9.97348 6.9065L2.11612 11.4766C1.40851 11.8897 0.5 11.3931 0.5 10.5692V1.42675C0.5 0.508318 1.4777 0.147994 2.11612 0.519304L9.97348 5.09164Z' fill='%23706FE5'/%3E%3C/svg%3E%0A");
+        ;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .btn_watch:hover & {
+        background-color: rgba($color_background, 45%);
+    }
 }
 
 .hero__info_wrap {
@@ -36,14 +125,93 @@
 
 }
 
-.hero__descr {
-    &:not(:last-child) {
-        margin-bottom: 2.4rem
+
+.hero__picture_wrap {
+    position: relative;
+    width: 43rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+
+.hero__picture {
+    display: flex;
+    justify-content: center;
+    height: 40rem;
+    width: 40rem;
+    border: 1rem solid $color_background;
+    border-radius: 50%;
+    background-color: rgba(112, 111, 229, 0.15);
+    flex-shrink: 0;
+}
+
+.hero__picture__in {
+    position: absolute;
+    bottom: 5rem;
+    height: 46rem;
+    width: 100%;
+
+}
+
+.hero__picture__img {
+    @extend %contain_img
+}
+
+.hero__decor {
+    position: absolute;
+}
+
+.hero_employees {
+    position: absolute;
+    width: 24rem;
+    height: 13.2rem;
+    box-shadow: 0px 0.6rem 2rem 0px #0000001A;
+    background-color: $color_white;
+    border-radius: 1rem;
+    padding: 1.4rem 2.6rem;
+
+    overflow: hidden;
+}
+
+.hero_employees__photos_item {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #E9E8FA;
+
+    &:not(:first-child) {
+        margin-left: -2rem;
     }
 }
 
-/* .hero__img {
-    max-width: 100%;
-    width: 54.6rem;
-    height: 63.1rem;
-} */
+.hero_employees__photos_img {
+    @extend %cover_img;
+}
+
+.hero_employees__photos {
+    display: flex;
+    margin-bottom: 1rem;
+
+
+}
+
+.hero_employees__title {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.2px;
+    margin-bottom: 0.7rem;
+    color: $color_title;
+}
+
+.hero_employees__likes {
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2.4;
+    letter-spacing: 0.2px;
+    color: rgba($color_common_text, 80%);
+}
