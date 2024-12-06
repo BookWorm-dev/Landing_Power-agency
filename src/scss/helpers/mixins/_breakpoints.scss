@@ -1,14 +1,19 @@
+@use '../variables' as *;
+
 @mixin bp($width, $direction: max) {
-	@if $direction == min {
+	@if $direction ==min {
 		@media screen and (min-width: $width) {
 			@content;
 		}
-	} @else {
+	}
+
+	@else {
 		@media screen and (max-width: $width) {
 			@content;
 		}
 	}
 }
 
-// @include bp($point_1, min)
-// @include bp($point_2)
+@include bp($point_1, min);
+@include bp($point_2);
+
