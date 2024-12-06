@@ -1,9 +1,22 @@
 @use '../helpers/abstracts' as *;
 
+.section--hero {
+    @include bp($point_4, max) {
+        padding: 0;
+    }
+
+}
 
 .hero {
     display: flex;
     column-gap: 6rem;
+
+    @include bp($point_2) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        column-gap: 0;
+    }
 }
 
 .hero__title {
@@ -12,6 +25,18 @@
     line-height: 1.83;
     color: $color_title;
     margin-bottom: 4.2rem;
+
+    @include bp($point_5) {
+        font-size: 4.8rem;
+        line-height: 1.6;
+        margin-bottom: 3rem;
+    }
+
+    @include bp($point_7) {
+        font-size: 1.8rem;
+        line-height: 1.6;
+        margin-bottom: 3rem;
+    }
 
     strong {
         position: relative;
@@ -51,7 +76,23 @@
                 left: var(--minus-half-circle-d);
             }
 
+            @include bp($point_4) {
+                --circle-d: 2.4rem;
+                --minus-half-circle-d: calc(var(--circle-d) * -0.8);
+                border: 0.6rem solid $color_background;
+            }
 
+            @include bp($point_6) {
+                --circle-d: 2rem;
+                --minus-half-circle-d: calc(var(--circle-d) * -0.8);
+                border: 0.4rem solid $color_background;
+            }
+
+            @include bp($point_8) {
+                --circle-d: 1.8rem;
+                --minus-half-circle-d: calc(var(--circle-d) * -0.8);
+                border: 0.3rem solid $color_background;
+            }
         }
     }
 }
@@ -60,11 +101,21 @@
     &:not(:last-child) {
         margin-bottom: 2.4rem
     }
+
+    @include bp($point_5) {
+        font-size: 1.6rem;
+    }
 }
 
 .hero__btns {
     display: flex;
     column-gap: 3.4rem;
+
+    @include bp($point_5) {
+        flex-direction: column;
+        row-gap: 1.5rem;
+        column-gap: 0;
+    }
 }
 
 .btn_watch {
@@ -76,6 +127,10 @@
     line-height: 1.5;
     text-decoration: none;
     color: $color_title ;
+
+    @include bp($point_6) {
+        font-size: 1.6rem;
+    }
 }
 
 
@@ -110,6 +165,16 @@
     display: block;
     max-width: 62%;
     flex-shrink: 0;
+
+    @include bp($point_5) {
+        max-width: 100%;
+        margin-bottom: 20rem;
+    }
+
+    @include bp($point_4) {
+        max-width: 100%;
+        margin-bottom: 20rem;
+    }
 }
 
 
@@ -133,6 +198,14 @@
     justify-content: center;
     align-items: flex-end;
 
+    @include bp($point_5) {
+        width: 100%;
+    }
+
+    @include bp($point_4) {
+        width: 100%;
+    }
+
 }
 
 .hero__picture {
@@ -144,6 +217,11 @@
     border-radius: 50%;
     background-color: rgba(112, 111, 229, 0.15);
     flex-shrink: 0;
+
+    @include bp($point_5) {
+        height: 32rem;
+        width: 32rem;
+    }
 }
 
 .hero__picture__in {
@@ -172,6 +250,10 @@
     padding: 1.4rem 2.6rem;
     bottom: -3.6rem;
     overflow: hidden;
+
+    @include bp($point_5) {
+        width: 20rem;
+    }
 }
 
 .hero_employees__photos_item {
@@ -257,6 +339,10 @@
         border-radius: 50%;
         bottom: -7.9rem;
         right: 3.2rem;
+    }
+
+    @include bp($point_5) {
+        display: none; // Скрываем декор для маленьких экранов
     }
 }
 
