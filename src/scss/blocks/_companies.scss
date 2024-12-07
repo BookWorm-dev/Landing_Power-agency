@@ -8,6 +8,16 @@
     line-height: 1.2;
     letter-spacing: 0.2px;
     color: $color_title;
+
+    @include bp($point_5) {
+        font-size: 1.8rem;
+        margin-bottom: 3.5rem;
+    }
+
+    @include bp($point_7) {
+        font-size: 1.6rem;
+        margin-bottom: 3rem;
+    }
 }
 
 
@@ -34,15 +44,46 @@
         right: 0;
         background-image: linear-gradient(to left, #fff, transparent);
     }
+
+    @include bp($point_4) {
+
+        &::after,
+        &::before {
+            width: 5rem;
+        }
+    }
+
+    @include bp($point_6) {
+
+        &::after,
+        &::before {
+            display: none;
+        }
+    }
 }
 
 .companies_nav__item {
     display: block;
     width: 12.6rem;
     height: 4.2rem;
+    @include bp($point_5) {
+        width: 10rem;
+        height: 3.5rem;
+    }
+
+    @include bp($point_7) {
+        width: 8rem;
+        height: 3rem;
+    }
+
 }
 
 
 .companies__img {
     @extend %contain_img;
+
+    @include bp($point_5) {
+        max-width: 100%;
+        height: auto;
+    }
 }

@@ -43,7 +43,7 @@
 .content_project {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 188px);
+    grid-template-rows: repeat(2, 18.8rem);
     gap: 13rem 3rem;
 
     @include bp($point_2, max) {
