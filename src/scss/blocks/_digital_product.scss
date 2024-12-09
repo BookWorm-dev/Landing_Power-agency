@@ -47,14 +47,13 @@
     gap: 13rem 3rem;
 
     @include bp($point_2, max) {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 18rem 2rem;
+        display: block;
+
     }
 
     @include bp($point_5, max) {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto;
-        gap: 12rem 1.5rem;
+        display: block;
+
     }
 }
 
@@ -98,7 +97,7 @@
     margin-bottom: 2.8rem;
 
     @include bp($point_6, max) {
-        margin-bottom: 2.8rem;
+        margin-bottom: 3.8rem;
         width: 100%;
         height: auto;
     }

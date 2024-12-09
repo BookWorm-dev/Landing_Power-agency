@@ -70,7 +70,7 @@ if ("function" == typeof Swiper) {
 document.querySelector(".block") && (document.querySelector(".block").innerHTML = "hello");
 
 //scroll
-document.querySelectorAll('.nav__link').forEach(link => {
+/* document.querySelectorAll('.nav__link').forEach(link => {
     link.addEventListener('click', function (e) {
         e.preventDefault();
 
@@ -84,3 +84,4 @@ document.querySelectorAll('.nav__link').forEach(link => {
         }
     });
 });
+ */

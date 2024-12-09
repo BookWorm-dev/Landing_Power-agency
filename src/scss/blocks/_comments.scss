@@ -1,4 +1,4 @@
-@use '../helpers/abstracts' as *;
+@use './helpers/abstracts' as *;
 
 .container--comments {
     position: relative;
@@ -33,6 +33,7 @@
             display: none;
         }
     }
+
     @include bp($point_4) {
 
         &::after,
@@ -72,7 +73,18 @@
         rotate: 180deg;
     }
 
-    @include bp($point_6) {
+    @include bp($point_4 ) {
+        &::after {
+            left: -3rem;
+        }
+
+        &::before {
+            right: -3rem;
+            rotate: 180deg;
+        }
+    }
+
+    @include bp($point_6 ) {
 
         &::after,
         &::before {
@@ -206,6 +218,7 @@
     @include bp($point_6) {
         font-size: 2rem;
     }
+
     @include bp($point_8) {
         font-size: 1rem;
     }
@@ -221,6 +234,7 @@
     @include bp($point_6) {
         font-size: 2rem;
     }
+
     @include bp($point_8, max) {
         font-size: 1rem;
     }

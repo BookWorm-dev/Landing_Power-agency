@@ -4,7 +4,6 @@
 html {
 	// font-size: calc(100dvw / 1920 * 10);
 	scroll-behavior: smooth;
-
 	font-size: 10px;
 }
 
@@ -24,11 +23,12 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100%;
-	overflow: hidden;
-}
+/* 	overflow: hidden;
+ */}
 
 .main {
 	flex-grow: 1;
+	padding-top: 6.6rem;
 }
 
 .section {

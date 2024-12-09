@@ -6,7 +6,7 @@
     background-color: $color_common_text;
 
 
-    @include bp($point_2, max) {
+    @include bp($point_2, min) {
         height: 38rem;
     }
 

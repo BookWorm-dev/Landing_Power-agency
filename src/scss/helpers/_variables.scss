@@ -19,17 +19,17 @@ $color_background_opacity: rgba(112, 111, 229, 0.1);
 $font_1: 'Poppins', sans-serif;
 
 $transition_dur: 0.3s;
-
+$z-index_header: 99;
 // breakpoints
-$point_1: 1200px;
-$point_2: 1024px;
-/* ! */
-$point_3: 1023.98px;
-$point_4: 768px;
-/* ! */
-$point_5: 767.98px;
-$point_6: 480px;
-$point_7: 375px;
-/* ! */
-$point_8: 374.98px;
-/* ! */
+    $point_1: 1200px;
+    $point_2: 1024px;
+    /* ! */
+    $point_3: 1023.98px;
+    $point_4: 768px;
+    /* ! */
+    $point_5: 767.98px;
+    $point_6: 480px;
+    $point_7: 375px;
+    /* ! */
+    $point_8: 374.98px;
+    /* ! */
