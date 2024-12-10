@@ -1,5 +1,14 @@
 @use './helpers/abstracts' as *;
 
+.section--bg {
+
+    @include bp($point_6) {
+        padding: 0rem;
+
+    }
+
+}
+
 .container--comments {
     position: relative;
 

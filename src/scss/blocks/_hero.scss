@@ -1,7 +1,7 @@
 @use '../helpers/abstracts' as *;
 
 .section--hero {
-    @include bp($point_4, max) {
+    @include bp($point_4) {
         padding: 0;
     }
 
@@ -175,6 +175,12 @@
         max-width: 100%;
         margin-bottom: 20rem;
     }
+
+    @include bp($point_2) {
+        margin-bottom: 15rem;
+
+    }
+
 }
 
 
@@ -199,14 +205,10 @@
     align-items: flex-end;
 
     @include bp($point_5) {
-        width: 100%;
+        max-width: 100%;
     }
-
-    @include bp($point_4) {
-        width: 100%;
-    }
-
 }
+
 
 .hero__picture {
     display: flex;
@@ -218,10 +220,13 @@
     background-color: rgba(112, 111, 229, 0.15);
     flex-shrink: 0;
 
-    @include bp($point_5) {
-        height: 32rem;
-        width: 32rem;
-    }
+    @include bp($point_4, min) {
+		border-radius: 50%;
+	}
+
+	@include bp($point_5) {
+		max-width: 100%;
+	}
 }
 
 .hero__picture__in {
@@ -339,13 +344,25 @@
         border-radius: 50%;
         bottom: -7.9rem;
         right: 3.2rem;
+
+        @include bp($point_4) {
+            display: none;
+
+        }
+
     }
 
     @include bp($point_5) {
-        display: none; // Скрываем декор для маленьких экранов
+        display: none;
     }
 }
 
 .hero__decor_img {
-    @extend %contain_img
+    @extend %contain_img;
+
+    @include bp($point_4) {
+        display: none;
+
+    }
+
 }

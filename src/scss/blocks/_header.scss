@@ -4,10 +4,11 @@
     display: block;
     position: sticky;
     top: 0;
-    height: 4rem;
+    height: 100%;
     padding: 3rem 0;
-/*     margin-bottom: 4rem;
- */    background-color: $color_white;
+    /*     margin-bottom: 4rem;
+ */
+    background-color: $color_white;
     z-index: $z-index_header;
 
     .header__in {
@@ -32,6 +33,12 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+
+        @include bp($point_6) {
+            display: none;
+
+        }
+
 
     }
 
