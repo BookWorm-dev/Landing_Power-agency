@@ -205,6 +205,7 @@
     align-items: flex-end;
 
     @include bp($point_5) {
+        overflow: hidden;
         max-width: 100%;
     }
 }
@@ -221,12 +222,12 @@
     flex-shrink: 0;
 
     @include bp($point_4, min) {
-		border-radius: 50%;
-	}
+        border-radius: 50%;
+    }
 
-	@include bp($point_5) {
-		max-width: 100%;
-	}
+    @include bp($point_5) {
+        max-width: 100%;
+    }
 }
 
 .hero__picture__in {
@@ -234,6 +235,15 @@
     bottom: 5rem;
     height: 46rem;
     width: 46rem;
+
+    @include bp($point_4, min) {
+        bottom: 5rem;
+    }
+
+    @include bp($point_5) {
+        bottom: -6rem;
+        max-width: 100%;
+    }
 
 }
 
@@ -257,7 +267,7 @@
     overflow: hidden;
 
     @include bp($point_5) {
-        width: 20rem;
+        display: none;
     }
 }
 
