@@ -5,13 +5,14 @@
     top: 0;
     z-index: $z-index_header;
     background-color: $color_white;
-    padding: 3rem 0;
+    height: 5rem;
 }
 
 .header__in {
+    height: 100%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    column-gap: 24.6rem;
 }
 
 
@@ -25,8 +26,10 @@
     .menu_button {
         display: block;
         position: absolute;
-        top: 1rem; /* Отступ сверху */
-        right: 1rem; /* Отступ справа */
+        top: 1rem;
+        /* Отступ сверху */
+        right: 1rem;
+        /* Отступ справа */
         height: 5rem;
         width: 5rem;
         background-color: transparent;
@@ -40,6 +43,8 @@
 }
 
 .nav {
+    display: flex;
+
     @include bp($point_5) {
         position: fixed;
         z-index: 998;
