@@ -112,9 +112,13 @@
     column-gap: 3.4rem;
 
     @include bp($point_5) {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    @include bp($point_6) {
         flex-direction: column;
-        row-gap: 1.5rem;
-        column-gap: 0;
+        row-gap: 3rem;
     }
 }
 
@@ -232,8 +236,9 @@
 
 .hero__picture__in {
     position: absolute;
-/*     bottom: 5rem;
- */    height: 46rem;
+    /*     bottom: 5rem;
+ */
+    height: 46rem;
     width: 46rem;
 
     @include bp($point_4, min) {

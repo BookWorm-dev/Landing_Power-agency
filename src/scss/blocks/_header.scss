@@ -1,69 +1,130 @@
 @use '../helpers/abstracts' as *;
 
 .header {
-    display: block;
     position: sticky;
     top: 0;
-    height: 100%;
-    padding: 3rem 0;
-    /*     margin-bottom: 4rem;
- */
-    background-color: $color_white;
     z-index: $z-index_header;
+    background-color: $color_white;
+    padding: 3rem 0;
+}
 
-    .header__in {
+.header__in {
+    display: flex;
+    align-items: center;
+    column-gap: 24.6rem;
+}
+
+
+.menu_button {
+    @include bp($point_4, min) {
+        display: none;
+    }
+}
+
+@include bp($point_5) {
+    .menu_button {
+        display: block;
+        position: absolute;
+        top: 1rem; /* Отступ сверху */
+        right: 1rem; /* Отступ справа */
+        height: 5rem;
+        width: 5rem;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        background-image: url(../imgs/Header/hamburger-menu-more-svgrepo-com.svg);
+        border: none;
+        cursor: pointer;
+    }
+}
+
+.nav {
+    @include bp($point_5) {
+        position: fixed;
+        z-index: 998;
+        top: 0;
+        left: 0;
+        width: 100dvw;
+        height: 100dvh;
+        backdrop-filter: blur(9rem);
         display: flex;
-        align-items: center;
-        column-gap: 24.6rem;
-
+        transition: all 0.3s ease-in-out;
+        overflow: auto;
+        transform: translateX(-100dvw);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
     }
+}
 
-    .header_logo_img {
-        @extend %cover_img
+.nav.active {
+    @include bp($point_5) {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
     }
+}
 
-    .header_logo {
-        width: 9.4rem;
-        height: 3.8rem;
-        background-color: white;
+.nav__close {
+    @include bp($point_5) {
+        display: block;
+        position: absolute;
+        z-index: 999;
+        top: 6rem;
+        left: 2rem;
+        height: 4rem;
+        width: 4rem;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        background-image: url(../imgs/Header/cross-svgrepo-com.svg);
+        border: none;
+        cursor: pointer;
     }
+}
 
-    .nav {
+.header_logo_img {
+    @extend %cover_img
+}
+
+.header_logo {
+    width: 9.4rem;
+    height: 3.8rem;
+    background-color: white;
+}
+
+
+.nav__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 6rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.8rem;
+
+    @include bp($point_5) {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column;
+        padding: 4rem;
         align-items: center;
-
-        @include bp($point_6) {
-            display: none;
-
-        }
-
-
+        row-gap: 7rem;
+        margin: auto;
+        text-align: center;
     }
+}
 
-    .nav__list {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        column-gap: 6rem;
-        font-size: 1.6rem;
-        font-weight: 400;
-        line-height: 2.8rem;
-    }
+.nav__link:hover {
+    text-decoration: underline;
+    color: $color_background;
+}
 
-    .nav__link:hover {
-        text-decoration: underline;
-        color: $color_background;
-        ;
-
-    }
-
-    .nav__link {
-        text-decoration: none;
-        color: $color_title;
-        transition: color 0.3s ease-in-out;
-
-    }
+.nav__link {
+    text-decoration: none;
+    color: $color_title;
+    transition: color 0.3s ease-in-out;
 }
